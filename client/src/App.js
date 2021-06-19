@@ -48,7 +48,7 @@ function App() {
               }
               name="item">
           </input>
-          <label>Item style</label>
+          <label>Item Type</label>
           <input 
           value={form.tyle}
             onChange={(e) => 

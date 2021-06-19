@@ -23,11 +23,23 @@
 
 .top-left {
   position: absolute;
-  top: 40px;
   left: 50px;
   width: 300px;
 }
 
-.bottom-left h2 {
-  top: 800px;
+.bottom-left {
+  position: absolute;
+  bottom: 380px;
+  left: 60px;
+  color: white;
+  font-size: 48px;
+}
+
+#butt {
+  background-color: #fd8061;
+  color: white;
+  border-color: white;
+  padding: 10px 24px;
+  width: 400px;
+  margin-bottom: 10px;
 }
