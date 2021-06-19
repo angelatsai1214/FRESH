@@ -1,0 +1,33 @@
+#backimg {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+.links {
+  margin-left: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.top-left {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 300px;
+}
+
+.bottom-left h2 {
+  top: 800px;
+}

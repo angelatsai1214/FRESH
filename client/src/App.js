@@ -1,8 +1,7 @@
+import React, { useEffect, useState } from "react";
 import logo from './freshlogo.png';
 import background from './d2B90dLCNy4.png';
-import * as React from 'react';
 import './App.css';
-import { useEffect, useState } from "react";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -28,10 +27,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{ backgroundImage: `url(${background})` }}>
+        <div style={{backgroundImage: `url(${background})` }}>
           <img src={logo} className="App-logo" alt="logo" />
           <h1> Happy Cooking!</h1>
-          <p>Your ingredients, our recipes -- a perfect match. Over 5,000 recipes at your finger tips</p>
+          <p>Your ingredients, our recipes -- a perfect match. Over 5,000 recipes at your finger tips.</p>
           <button type="button">Track your pantry</button>
           <button type="button">Saved recipes</button>
           <h1></h1>
@@ -49,6 +48,17 @@ function App() {
               }
               name="item">
           </input>
+          <label>Item style</label>
+          <input 
+          value={form.tyle}
+            onChange={(e) => 
+              setForm({
+                ...form,
+                type: e.target.value,
+                }) 
+              }
+              name="type">
+          </input>
           <label>Item Quantity</label>
           <input 
             value={form.quantity}
@@ -61,8 +71,8 @@ function App() {
               type="number"
               name="quantity"
           ></input>
-          <label>Expiration Date</label
-          ><input 
+          <label>Expiration Date</label>
+          <input 
             value={form.expDate}
             onChange={(e) => 
               setForm({
@@ -75,14 +85,7 @@ function App() {
           ></input>
           <button type="submit">Add Item</button>
         </form>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
     </div>
   );
