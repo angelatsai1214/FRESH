@@ -190,3 +190,8 @@ body {
   text-align: center;
   top: 130px;
 }
+
+.fb {
+  position: absolute;
+  display: block;
+}
