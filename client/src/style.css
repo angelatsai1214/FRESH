@@ -1,5 +1,10 @@
+body {
+  font-family: "Palanquin", sans-serif;
+}
+
 #backimg {
   width: 100%;
+  opacity: 0.8;
 }
 
 .container {
@@ -42,4 +47,88 @@
   padding: 10px 24px;
   width: 400px;
   margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.links:hover {
+  color: #fd8061;
+}
+
+#butt:hover {
+  color: rgb(241, 232, 232);
+}
+
+#searchBar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+  height: 40px;
+  font-size: 24px;
+  padding-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-color: #fd8061;
+  border-style: solid;
+}
+
+.homeheader {
+  font-size: 68px;
+  margin: 50px;
+}
+
+#pop {
+  position: relative;
+  font-size: 68px;
+  margin: 50px;
+}
+
+.s1 {
+  width: 298px;
+  float: left;
+  margin-left: 50px;
+  border-style: solid;
+  border-color: rgb(241, 232, 232);
+  background-color: white;
+}
+
+.des {
+  position: relative;
+  left: 50px;
+  top: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.heart {
+  position: relative;
+  left: 120px;
+}
+
+.s2 {
+  position: relative;
+  width: 210px;
+  float: left;
+  margin-left: 50px;
+  border-style: solid;
+  border-color: rgb(241, 232, 232);
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+.rate,
+.des1 {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.four {
+  display: block;
+  margin-top: 550px;
 }

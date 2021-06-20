@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Fresh</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 
@@ -11,27 +13,30 @@
         <header>
             <div class="container">
                 <nav>
-                    <div style="background-image: url('Vector.png'); background-repeat: no-repeat; background-size: 20%; background-position: center;">
-                        <img src="freshlogo.png" alt="logo" id="logo" style="height: 40vmin;">
-                    </div>
                     <div class="top-right">
-                        <a href="#" style="color: black" class="links">Inventory</a>
+                        <a href="#" style="color: black; font-size: 28px" class="links">Inventory</a>
                     </div>
                 </nav>
+                <div style="background-image: url('Vector.png'); background-repeat: no-repeat; background-size: 20%; background-position: center; margin-top: 20px">
+                    <img src="freshlogo.png" alt="logo" id="logo" style="height: 40vmin;">
+                </div>
             </div>
         </header>
 
         <form class="container">
-            <input type="text" name="search" style="width: 650px" placeholder="Search">
+            <input type="text" name="search" style="width: 600px; height: 30px; font-size: 24px" placeholder="Search">
             <p></p>
+            <p><br></p>
             <section class="container" style="margin-left: 300px">
                 <div class="top-left" style="text-align: left;">
                     <label>Item Name</label>
                     <input type="text" name="item name" placeholder="Input name"></input>
                     <p></p>
+                    <!-- 
                     <button type="button" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px;">+</button>
-                    <p>Add Item Names</p>
+                    <p>Add Item Names</p>-->
                     <p></p>
+                    
                     <form>
                         <label>Item Type</label>
                         <select>
@@ -56,7 +61,7 @@
             </section>
 
             <section class="container" style="margin-top: 150px;">
-                <p style="color: #24997F;">Choose Meal:</p>
+                <p style="color: #208b74;"><b>Choose Meal:</b></p>
                 <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Breakfast</button>
                 <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Lunch</button>
                 <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Dinner</button>
@@ -65,7 +70,7 @@
             </section>
 
             <section class="container" style="margin-top: 50px;">
-                <button type="submit" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px;">Add to Inventory</button>
+                <button type="submit" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px; margin-bottom: 30px">Add to Inventory</button>
             </section>
         </form>
 
