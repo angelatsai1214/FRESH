@@ -14,7 +14,7 @@
             <div class="container">
                 <nav>
                     <div class="top-right">
-                        <a href="#" style="color: black; font-size: 28px" class="links">Inventory</a>
+                        <a href="#" style="color: #24997F; font-size: 28px" class="links">Inventory</a>
                     </div>
                 </nav>
                 <div style="background-image: url('Vector.png'); background-repeat: no-repeat; background-size: 20%; background-position: center; margin-top: 20px">
@@ -23,12 +23,12 @@
             </div>
         </header>
 
-        <form class="container">
+        <form class="container" action="add.php" method="post">
             <input type="text" name="search" style="width: 600px; height: 30px; font-size: 24px" placeholder="Search">
             <p></p>
             <p><br></p>
-            <section class="container" style="margin-left: 300px">
-                <div class="top-left" style="text-align: left;">
+            <section class="container">
+                <div class="top-left" style="text-align: left; margin-left: 250px">
                     <label>Item Name</label>
                     <input type="text" name="item name" placeholder="Input name"></input>
                     <p></p>
@@ -50,8 +50,8 @@
                 </div>
             </section>
 
-            <section class="container" style="margin-right: 300px;">
-                <div class="top-right" style="text-align: left;">
+            <section class="container">
+                <div class="top-right" style="text-align: left; margin-right: 250px;">
                     <label>Expiration Date</label>
                         <input type="date" ></input>
                     <p></p>
@@ -70,7 +70,7 @@
             </section>
 
             <section class="container" style="margin-top: 50px;">
-                <button type="submit" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px; margin-bottom: 30px">Add to Inventory</button>
+                <button type="submit" Value="Add to Inventory" name="submit" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px; margin-bottom: 30px">Add to Inventory</button>
             </section>
         </form>
 
