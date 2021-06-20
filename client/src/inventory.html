@@ -23,57 +23,123 @@
             </div>
         </header>
 
-        <form class="container" action="add.php" method="post">
+        <form class="container">
             <input type="text" name="search" style="width: 600px; height: 30px; font-size: 24px" placeholder="Search">
             <p></p>
-            <p><br></p>
-            <section class="container">
-                <div class="top-left" style="text-align: left; margin-left: 250px">
-                    <label>Item Name</label>
-                    <input type="text" name="item name" placeholder="Input name"></input>
-                    <p></p>
-                    <!-- 
-                    <button type="button" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px;">+</button>
-                    <p>Add Item Names</p>-->
-                    <p></p>
-                    
-                    <form>
-                        <label>Item Type</label>
-                        <select>
-                            <option placeholder="Select type"></option>
-                            <option value="Fresh Food">Fresh Food</option>
-                            <option value="Dry Goods">Dry Goods</option>
-                            <option value="Pre-Packaged">Pre-Packaged</option>
-                            <option value="Frozen Goods">Frozen Goods</option>
-                        </select>
-                    </form>
-                </div>
-            </section>
+            <form class="container" action="add.php" method="post">
 
-            <section class="container">
-                <div class="top-right" style="text-align: left; margin-right: 250px;">
-                    <label>Expiration Date</label>
-                        <input type="date" ></input>
-                    <p></p>
-                    <label>Item Quantity</label>
-                    <input placeholder="Input number"></input>
-                </div>
-            </section>
+                <section class="container">
+                    <div class="top-left" style="text-align: left; margin-left: 250px">
+                        <label>Item Name</label>
+                        <input id="input1" type="text" name="item name" placeholder="Input name"></input>
+                        <p></p>
+                        <div>
+                            <label>Item Type</label>
+                            <select id="input2">
+                                <option placeholder="Select type"></option>
+                                <option value="Fresh Food">Fresh Food</option>
+                                <option value="Dry Goods">Dry Goods</option>
+                                <option value="Pre-Packaged">Pre-Packaged</option>
+                                <option value="Frozen Goods">Frozen Goods</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
 
-            <section class="container" style="margin-top: 150px;">
-                <p style="color: #208b74;"><b>Choose Meal:</b></p>
-                <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Breakfast</button>
-                <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Lunch</button>
-                <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Dinner</button>
-                <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Dessert</button>
-                <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Snacks</button>
-            </section>
+                <section class="container">
+                    <div class="top-right" style="text-align: left; margin-right: 250px;">
+                        <label>Expiration Date</label>
+                            <input id="input3" type="date" ></input>
+                        <p></p>
+                        <label>Item Quantity</label>
+                        <input id="input4" placeholder="Input number"></input>
+                    </div>
+                </section>
 
-            <section class="container" style="margin-top: 50px;">
-                <button type="submit" Value="Add to Inventory" name="submit" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px; margin-bottom: 30px">Add to Inventory</button>
-            </section>
+                <section class="container" style="margin-top: 150px;">
+                    <p style="color: #208b74;"><b>Choose Meal:</b></p>
+                        <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Breakfast</button>
+                        <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Lunch</button>
+                        <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Dinner</button>
+                        <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Dessert</button>
+                        <button type="button" style="background-color: white; color: black; border: black; padding: 10px; border-radius: 8px;">Snacks</button>
+                </section>
+
+                <section class="container" style="margin-top: 50px;">
+                    <button id="submit" type="submit" Value="Add to Inventory" name="submit" style="background-color: #24997F; color: white; border: #24997F; padding: 10px; border-radius: 8px; margin-bottom: 30px">Add to Inventory</button>
+                </section>
+            </form>
         </form>
 
+        <h1 style="color: #208b74; text-align: center;">My Inventory:</h1>
+
+        <div>
+            <ul id="myidlist"></ul>
+        </div>
+
+    <script>
+        var input1 = document.getElementById("input1");
+        var input2 = document.getElementById("input2");
+        var input3 = document.getElementById("input3");
+        var input4 = document.getElementById("input4");
+        var button = document.getElementById("submit");
+        var inventory = document.getElementById("myidlist");
+
+
+        button.onclick=(event) => {
+            event.preventDefault();
+            console.log(input1.value);
+            var input1value=input1.value;
+            var input2value=input2.value;
+            var input3value=input3.value;
+            var input4value=input4.value;
+
+            var obj={
+                item_name: input1value,
+                quantity: input4value,
+                expdate: input3value,
+                item_type: input2value
+            };
+
+            var list;
+
+            console.log(obj);
+            if(localStorage.getItem("items")) {
+                var myitems=JSON.parse(localStorage.getItem("items"));
+                myitems.push(obj);
+                list=myitems;
+                localStorage.setItem("items", JSON.stringify(myitems));
+            }
+            else {
+                var myitems=[];
+                myitems.push(obj);
+                list=myitems;
+                localStorage.setItem("items", JSON.stringify(myitems));
+            }
+
+            var str="";
+            for(item of list) {
+                console.log(item);
+                str+=`<li>${item.item_name}, ${item.quantity}, ${item.expdate}, ${item.item_type} </li>`;
+            }
+
+            inventory.innerHTML=str;
+
+        };
+
+
+        var mylist=JSON.parse(localStorage.getItem("items"));
+        var str="";
+        if(mylist != undefined) 
+            for(item of mylist) {
+                console.log(item);
+                str+=`<li>${item.item_name}, ${item.quantity}, ${item.expdate}, ${item.item_type} </li>`;
+            }
+
+        inventory.innerHTML=str == ""?"No Items Present":str;
+
+
+    </script>
 
     </body>
 
