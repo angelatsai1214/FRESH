@@ -14,22 +14,22 @@
             <div class="container">
                 <nav>
                     <div class="top-right">
-                        <a href="#" style="color: #24997F; font-size: 28px" class="links">Inventory</a>
+                        <a href="#" style="color: #24997F; font-size: 120%" class="links">Home</a>
+                        <a href="#" style="color: #24997F; font-size: 120%" class="links">Account</a>
                     </div>
                 </nav>
-                <div style="background-image: url('Vector.png'); background-repeat: no-repeat; background-size: 20%; background-position: center; margin-top: 20px">
+                <div style="background-image: url('Vector.png'); background-repeat: no-repeat; background-size: 200px; background-position: center; margin-top: 20px">
                     <img src="freshlogo.png" alt="logo" id="logo" style="height: 40vmin;">
                 </div>
             </div>
         </header>
 
         <form class="container">
-            <input type="text" name="search" style="width: 600px; height: 30px; font-size: 24px" placeholder="Search">
-            <p></p>
+            <h1 style="color: #24997F; text-align: center;">Add Items To Inventroy:</h1>
             <form class="container" action="add.php" method="post">
 
                 <section class="container">
-                    <div class="top-left" style="text-align: left; margin-left: 250px">
+                    <div class="top-left" style="text-align: left; margin: auto; width: 50%; display: block;">
                         <label>Item Name</label>
                         <input id="input1" type="text" name="item name" placeholder="Input name"></input>
                         <p></p>
@@ -47,7 +47,7 @@
                 </section>
 
                 <section class="container">
-                    <div class="top-right" style="text-align: left; margin-right: 250px;">
+                    <div class="top-right" style="text-align: left; margin: auto; width: 50%; display: inline; white-space: nowrap;">
                         <label>Expiration Date</label>
                             <input id="input3" type="date" ></input>
                         <p></p>
@@ -71,7 +71,11 @@
             </form>
         </form>
 
-        <h1 style="color: #208b74; text-align: center;">My Inventory:</h1>
+        <h1 style="color: #24997F; text-align: center;">Search From Inventory</h1>
+        
+        <input type="text" name="search" style="width: 75%; height: 30px; font-size: 24px; margin: auto; display: block;" placeholder="Search">
+
+        <h1 style="color:#24997F; text-align: center;">My Inventory:</h1>
 
         <div>
             <ul id="myidlist"></ul>
