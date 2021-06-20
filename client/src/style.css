@@ -205,3 +205,18 @@ body {
   position: absolute;
   display: block;
 }
+
+.white {
+  background-color: white;
+  width: 600px;
+
+  margin-left: 50px;
+  display: absolute;
+}
+
+.inner {
+  background-color: #fec0a0;
+  border-radius: 10%;
+  height: 400px;
+  margin-left: 15px;
+}
